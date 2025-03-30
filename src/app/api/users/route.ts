@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         message:
-          "Server error. make sure you fill 'name', 'username' and 'email' fields",
+          "Server error. make sure you fill 'name', 'username' and 'email' in JSON format",
       },
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
@@ -145,7 +145,7 @@ export async function PUT(req: NextRequest) {
     return NextResponse.json(
       {
         message:
-          "Server error. make sure you fill 'id', 'name', 'username' and 'email' fields",
+          "Server error. make sure you fill 'id', 'name', 'username' and 'email' in JSON format",
       },
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
@@ -190,7 +190,7 @@ export async function DELETE(req: NextRequest) {
   } catch (_) {
     return NextResponse.json(
       {
-        message: "Server error. make sure you fill 'id' field",
+        message: "Server error. make sure you fill 'id' in JSON format",
       },
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
